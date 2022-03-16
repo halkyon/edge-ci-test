@@ -1,0 +1,6 @@
+[submodule "gateway-mint"]
+	path = gateway-mint
+	url = https://github.com/storj/gateway-mint.git
+[submodule "splunk-s3-tests"]
+	path = splunk-s3-tests
+	url = https://github.com/storj/splunk-s3-tests.git
