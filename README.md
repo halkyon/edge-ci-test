@@ -11,6 +11,12 @@ It contains:
 * [gateway-mint](https://github.com/storj/gateway-mint)
 * [splunk-s3-tests](https://github.com/storj/splunk-s3-tests)
 
+## TODO
+
+* Bring in integration test scripts from Gateway-ST
+* Install [rclone and test command](https://github.com/storj/gateway-st/blob/main/testsuite/integration/rclone.sh)
+* CI: when a change to this repo is made, it should test it against latest Gateway-ST and MT
+
 ## Building
 
 * Check out this code somewhere
@@ -44,6 +50,9 @@ docker run \
 		&& psql -U postgres -c "create database integration" \
 		&& /gateway/testsuite/integration/run.sh'
 ```
+
+TODO: The test scripts are currently hosted in Gateway-ST, but ultimately should
+reside in the edge-ci container.
 
 Note: `GOMODCACHE` volume and environment variable aren't strictly required, but
 help to speed things up by using your local Go cache instead of downloading
